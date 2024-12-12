@@ -1,6 +1,6 @@
 # NGINX instance
 resource "aws_instance" "nginx_ec2" {
-  ami                         = "ami-0c02fb55956c7d316"  # Amazon Linux 2 AMI
+  ami                         = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.private_a.id
   associate_public_ip_address = false
@@ -57,7 +57,7 @@ resource "aws_lb_listener" "nginx_http_listener" {
   protocol          = "HTTP"
 
   default_action {
-    type = "forward"
+    type             = "forward"
     target_group_arn = aws_lb_target_group.nginx_tg.arn
   }
 }
