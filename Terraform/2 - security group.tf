@@ -1,7 +1,6 @@
 # Security Group for EKS
-resource "aws_security_group" "nginx_ec2" {
+resource "aws_security_group" "nginx_sg" {
   vpc_id = aws_vpc.main.id
-  name   = "nginx_ec2_sg"
 
   ingress {
     description      = "Allow HTTP"
@@ -19,6 +18,6 @@ resource "aws_security_group" "nginx_ec2" {
   }
 
   tags = {
-    Name = "OpenVPN Security Group"
+    Name = "NGINX EC2 Security Group"
   }
 }
