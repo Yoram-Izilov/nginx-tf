@@ -19,10 +19,10 @@ Upon deployment, the NGINX server responds with the text "yo this is nginx" when
   - AWS_SANDBOX (aws-access-key-id)
   - AWS_SECRET (aws-secret-access-key)
   - DOCKER_HUB_TOKEN
-The 'terraform.yml' build and push the docker image to docker hub, and create an AWS envoirment in us-east-1
+- The 'terraform.yml' build and push the docker image to docker hub, and create an AWS envoirment in us-east-1
 
-## in case of repo clone to your own
-- make sure to change in the 'terraform.yml' docker username and image_name to yours
-- in '3 - nginx.tf' change - nerdfromhell/yo-nginx to your own docker image name
+## Instructions for cloning the repository
+- Make sure to change in the 'terraform.yml' docker username and image_name to yours
+- In '3 - nginx.tf' change - nerdfromhell/yo-nginx to your own docker image name
 
 ### Credits - Yoram Izilov
