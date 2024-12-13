@@ -23,6 +23,25 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v4
+    
+    # login build and push nginx image to docker hub
+    - name: Log in to Docker Hub
+      run: echo "$DOCKER_HUB_TOKEN" | docker login --username nerdfromhell --password-stdin
+      env:
+        DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+    - name: Build the Docker image
+      run: |
+        IMAGE_NAME=nerdfromhell/yo-nginx
+        TAG=latest
+        docker build . --file Dockerfile --tag $IMAGE_NAME:$TAG
+      working-directory: ./nginx
+
+    - name: Push the Docker image
+      run: |
+        IMAGE_NAME=nerdfromhell/yo-nginx
+        TAG=latest
+        docker push $IMAGE_NAME:$TAG
 
     # Set AWS credentials from GitHub Secrets
     - name: Configure AWS Credentials

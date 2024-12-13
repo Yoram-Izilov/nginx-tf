@@ -4,7 +4,7 @@ resource "aws_instance" "nginx_ec2" {
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.private_a.id
   associate_public_ip_address = false
-  security_groups             = [aws_security_group.nginx_sg.name]
+  security_groups             = [aws_security_group.nginx_sg.id]
 
   user_data = <<-EOF
                 #!/bin/bash
