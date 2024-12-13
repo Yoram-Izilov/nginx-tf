@@ -1,6 +1,6 @@
 # NGINX Deployment on AWS with Terraform - Overview
 This project demonstrates the deployment of an NGINX web server on AWS infrastructure using Terraform, Docker, and AWS resources.<br/>
-Upon deployment, the NGINX server responds with the text "yo this is nginx" when accessed from a browser.
+Upon deployment, the NGINX server responds with the text "yo this is nginx" when accessed from a browser.<br/>
 You can access it with the Load Balancer DNS that was created.
 
 # Features
