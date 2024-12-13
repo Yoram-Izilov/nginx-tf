@@ -1,5 +1,5 @@
 # NGINX Deployment on AWS with Terraform - Overview
-This project demonstrates the deployment of an NGINX web server on AWS infrastructure using Terraform, Docker, and AWS resources.
+This project demonstrates the deployment of an NGINX web server on AWS infrastructure using Terraform, Docker, and AWS resources.<br/>
 Upon deployment, the NGINX server responds with the text "yo this is nginx" when accessed from a browser.
 
 # Features
@@ -22,7 +22,7 @@ Upon deployment, the NGINX server responds with the text "yo this is nginx" when
 The 'terraform.yml' build and push the docker image to docker hub, and create an AWS envoirment in us-east-1
 
 ## in case of repo clone to your own
-- make sure to change in the 'terraform.yml' docker username and image name to yours
-- in '3 - nginx.tf' nerdfromhell/yo-nginx to your own docker image name
+- make sure to change in the 'terraform.yml' docker username and image_name to yours
+- in '3 - nginx.tf' change - nerdfromhell/yo-nginx to your own docker image name
 
 ### Credits - Yoram Izilov
